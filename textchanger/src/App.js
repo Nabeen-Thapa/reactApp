@@ -8,7 +8,7 @@ import React from "react";
 
 function App() {
   const [mode, setMode] = useState("light");
- // color mode
+  // color mode
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark")
@@ -31,13 +31,13 @@ function App() {
     })
     setTimeout(() => {
       setAlert(null);
-    }, 1000);
+    }, 3000);
   }
   return (
     <>
-     <Navbar title="mysite" aboutUs="about mysite" mode={mode} toggleMode={toggleMode} />
-     <Alert alert={alert} />
-    <TextForm header="Enter the text" showAlert={showAlert} mode={mode} />
+      <Navbar title="mysite" aboutUs="about mysite" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <TextForm header="Enter the text" showAlert={showAlert} mode={mode} />
     </>
   );
 }
